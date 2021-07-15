@@ -1,0 +1,159 @@
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: white;
+  user-select: none;
+}
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("/img/wp4918886-lo-fi-desktop-wallpapers.jpeg");
+  background-size: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(89, 42, 88, 0.33) 0%,
+    rgba(43, 76, 90, 0.33) 100%
+  );
+  background-blend-mode: darken;
+}
+.darker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.33);
+}
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.header img {
+  height: 180px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+div.capture {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+form.capture {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 550px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 40px 20px;
+  background: #26262b;
+  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.25));
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Spartan", sans-serif;
+  font-size: 1.75rem;
+  font-weight: bolder;
+}
+p,
+small {
+  width: 90%;
+  margin: 0 auto 20px auto;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 0.9rem;
+}
+small {
+  width: 80%;
+  margin: 0 auto 20px auto;
+  font-size: 0.8rem;
+}
+input {
+  position: relative;
+  width: 50%;
+  margin: 0;
+  padding-left: 10px;
+  color: #26262b;
+  z-index: 9;
+}
+input:focus-within {
+  outline: 2px solid #000000;
+  /* outline: none; */
+}
+input::placeholder {
+  padding-left: 0px;
+}
+button {
+  margin-left: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Spartan", sans-serif;
+  font-size: 0.8rem;
+  color: white;
+  background: #8992e7;
+  cursor: pointer;
+
+  transition: 300ms ease-in-out all;
+}
+button:hover {
+  background: #3e4269;
+  transition: 300ms ease-in-out all;
+}
+button > span {
+  position: relative;
+  top: 2px;
+}
+.d-flex {
+  display: flex;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+.bottom-left {
+  
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  width: 300px;
+}
+.justify-center {
+  justify-content: center;
+}
+.ig svg,
+.spotify svg {
+  position: relative;
+  fill: white;
+  margin: 5px 10px;
+  cursor: pointer;
+  transition: 300ms ease-in-out all;
+}
+.ig svg:hover,
+.spotify svg:hover {
+  transition: 300ms ease-in-out all;
+  transform: scale(1.5);
+}
+@media screen and (max-width: 768px) {
+  form.capture {
+    min-width: 300px;
+  }
+}
