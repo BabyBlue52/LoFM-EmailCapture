@@ -15,12 +15,10 @@
       rel="stylesheet"
     />
     <!-- /Google Fonts -->
-    <script src="./js/script.js" async></script>
+    <script src="js/script.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
   </head>
   <body>
     <div class="wrapper">
@@ -48,7 +46,7 @@
                     placeholder="Enter Email"
                     value=""
                   />
-                  <button type="" onclick="submitForm()">
+                  <button type="button" class="submitForm">
                     <span>Join</span>
                   </button>
                 </div>
@@ -105,43 +103,7 @@
     </div>
   </footer>
   <script>
-    const submitForm = (e) => {
-      // e.preventDefault();
 
-      var val = document.getElementById("email");
-      var url = ""
-      
-      toasty();
-      
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", url, true);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr
-        .send(
-          JSON.stringify({
-            val: value
-          })
-        )
-        .then(() => {
-          console.log("fired");
-        });
-    };
-
-    var toast = document.getElementById("toast-wrapper");
-    var delay;
     
-    function toasty() {
-      delay = setTimeout(openNotification(), 750);
-      delay = setTimeout(closenNotification(), 4000);
-    }
-    const openNotification = () => {
-      console.log('open')
-      toast.style.bottom = '130px';
-    }
-
-    const closenNotification = () => {
-      console.log('close')
-      toast.style.marginBottom = '-130px';
-    }
   </script>
 </html>

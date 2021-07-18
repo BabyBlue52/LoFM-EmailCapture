@@ -160,6 +160,7 @@ button > span {
 }
 .toast {
   display: flex;
+  min-width: 300px;
   max-width: 300px;
   max-height: 45px;
   margin: 0 auto;
@@ -186,6 +187,11 @@ button > span {
 }
 @media screen and (max-width: 768px) {
   form.capture {
+    position: relative;
     min-width: 300px;
+    max-width: 300px;
+  }
+  footer {
+    max-width: 100vw;
   }
 }
