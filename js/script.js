@@ -1,13 +1,11 @@
-import $ from "jquery";
-
+import $ from 'jquery';
 
 $(document).ready(function(){
-  console.log('toasted');  
+    console.log('toasted');   
     $('.submitForm').click(function() {
       var val = document.getElementById("email");
       var url = ""
-      
-      
+       
       toasty();
       
       var xhr = new XMLHttpRequest();
