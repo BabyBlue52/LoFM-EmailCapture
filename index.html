@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
+    <title>LoFM | Sign Up</title>
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Google Fonts-->
@@ -44,8 +44,9 @@
                     type="email"
                     placeholder="Enter Email"
                     value=""
+                    required
                   />
-                  <button type="button" class="submitForm">
+                  <button type="submit" class="submitForm">
                     <span>Join</span>
                   </button>
                 </div>
@@ -108,23 +109,21 @@
           var val = document.getElementById("email");
           var url = "lofm@datflo.io"
           
-          toasty();
-          
           var xhr = new XMLHttpRequest();
           xhr.open("POST", url, true);
           xhr.setRequestHeader("Content-Type", "application/json");
-          xhr
-            .send(
-              JSON.stringify({
-                val: val
-              })
-            )
+          xhr.send(JSON.stringify({ val: val }))
+          var response = JSON.parse(xmlhttp.responseText);
+          if (xhr.status === 200) {
+             toasty();
+          } else {
+             alert('Could not submit email address');
+          }
         });
 
         var delay;
 
-        function toasty() {
-          console.log('open');
+        function toasty() {;
           setTimeout(function(){
             $("#toast-wrapper").animate({ bottom: "80" }, 500);
           }, 2000)
@@ -132,7 +131,6 @@
 
 
         $('.close').click(function() {
-          console.log('close')
           $("#toast-wrapper").animate({ bottom: "-100" }, 500);
           console.clear();
         })
