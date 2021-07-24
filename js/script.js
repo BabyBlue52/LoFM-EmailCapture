@@ -1,38 +1,34 @@
-import $ from 'jquery';
+import $ from "jquery";
 
-$(document).ready(function(){
-    console.log('toasted');   
-    $('.submitForm').click(function() {
-      var val = document.getElementById("email");
-      var url = ""
-       
-      toasty();
-      
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", url, true);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr
-        .send(
-          JSON.stringify({
-            val: val
-          })
-        )
-    });
+$(document).ready(function () {
+  console.log("toasted");
+  $(".submitForm").click(function () {
+    var val = document.getElementById("email");
+    var url = "";
 
-    var delay;
+    toasty();
 
-    function toasty() {
-      delay = setTimeout(openNotification(), 750);
-      delay = setTimeout(closeNotification(), 4000);
-    }
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(
+      JSON.stringify({
+        val: val
+      })
+    );
+  });
 
-    const openNotification = () => {
-      console.log('open')
-      $("#toast-wrapper").animate({ bottom: "300" }, 500);
-    }
+  function toasty() {
+    delay = setTimeout(openNotification(), 750);
+    delay = setTimeout(closeNotification(), 4000);
+  }
 
-    const closeNotification = () => {
-      console.log('close')
-    }
+  const openNotification = () => {
+    console.log("open");
+    $("#toast-wrapper").animate({ bottom: "300" }, 500);
+  };
+
+  const closeNotification = () => {
+    console.log("close");
+  };
 });
-   
