@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
+    <title>Thank You | LoFM</title>
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Google Fonts-->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,83 +28,33 @@
         <div class="darker">
           <div class="capture">
             <div class="header">
-              <img src="./img/logo.png" />
+              <a href="/">
+                <img src="./img/logo.png" />
+              </a>
             </div>
 
-            <!-- Begin Mailchimp Signup Form -->
-            <div id="mc_embed_signup">
-              <form
-                action="https://gmail.us6.list-manage.com/subscribe/post?u=e70d48f8315facc8ce5c486ff&amp;id=88d99be112"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                class="validate capture"
-                target="_blank"
-                novalidate
-              >
-                <h1>Coming Soon</h1>
-                <p>
-                  LoFM is an aggregated platform for Lo-fi enthusiasts to listen
-                  to some of their favorite artists all in one place.
-                </p>
-                <small>
-                  Sign up for our mailling list to be notified about the
-                  platform and be the first to know when we launch
-                </small>
-                <div id="mc_embed_signup_scroll">
-                  <label for="mce-EMAIL">Email Address </label>
-                  <input
-                    type="email"
-                    value=""
-                    name="EMAIL"
-                    class="required email"
-                    id="mce-EMAIL"
-                    placeholder="Enter email"
+            <div class="thank-you">
+              <div style="width: 100%;">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.393 7.5l-5.643 5.784-2.644-2.506-1.856 1.858 4.5 4.364 7.5-7.643-1.857-1.857z"
                   />
-
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div
-                    style="position: absolute; left: -5000px;"
-                    aria-hidden="true"
-                  >
-                    <input
-                      type="text"
-                      name="b_e70d48f8315facc8ce5c486ff_88d99be112"
-                      tabindex="-1"
-                      value=""
-                    />
-                  </div>
-
-                  <input
-                    type="submit"
-                    value="Subscribe"
-                    name="subscribe"
-                    id="mc-embedded-subscribe"
-                    class="button"
-                  />
-                </div>
-              </form>
+                </svg>
+              </div>
+              <h1>Thank You!</h1>
+              <p>Your email has been submitted.</p>
+              <p>
+                This email will be notified about all updates on
+                <span>Lo.FM</span>
+              </p>
             </div>
-
-            <!--End mc_embed_signup-->
           </div>
         </div>
-      </div>
-    </div>
-    <div id="toast-wrapper">
-      <div class="toast">
-        <i
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
-            /></svg
-        ></i>
-        <p>Thanks for signing up!</p>
       </div>
     </div>
   </body>
@@ -148,44 +97,4 @@
       <p>Photo Credits: ArseniXC, VVCephel</p>
     </div>
   </footer>
-  <script>
-    const submitForm = (e) => {
-      // e.preventDefault();
-
-      var val = document.getElementById("email");
-      var url = "";
-
-      toasty();
-
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", url, true);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr
-        .send(
-          JSON.stringify({
-            val: value
-          })
-        )
-        .then(() => {
-          console.log("fired");
-        });
-    };
-
-    var toast = document.getElementById("toast-wrapper");
-    var delay;
-
-    function toasty() {
-      delay = setTimeout(openNotification(), 750);
-      delay = setTimeout(closenNotification(), 4000);
-    }
-    const openNotification = () => {
-      console.log("open");
-      toast.style.bottom = "130px";
-    };
-
-    const closenNotification = () => {
-      console.log("close");
-      toast.style.marginBottom = "-130px";
-    };
-  </script>
 </html>
