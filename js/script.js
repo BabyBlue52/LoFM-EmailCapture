@@ -1,4 +1,5 @@
-import $ from "jquery";
+<<<<<<< CodeSandbox
+
 
 $(document).ready(function () {
   console.log("toasted");
