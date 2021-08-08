@@ -1,7 +1,5 @@
 body,
 html {
-  height: 100vh;
-  width: 100vw;
   overflow: hidden;
   color: white;
   user-select: none;
@@ -38,7 +36,7 @@ html {
 }
 .header {
   position: relative;
-  width: 100%;
+  width: 630px;
   display: flex;
 }
 .header a {
@@ -51,6 +49,7 @@ html {
   height: 180px;
   margin: 0 auto;
   margin-bottom: 20px;
+  filter: drop-shadow(2px 2px 15px rgba(255, 255, 255, 0.33));
 }
 div.capture {
   position: absolute;
@@ -63,37 +62,42 @@ form.capture {
   flex-direction: column;
   width: 100%;
   max-width: 550px;
-  height: 250px;
+  height: 300px;
   margin: 0 auto;
   border-radius: 10px;
   padding: 40px 20px;
   background: #26262b;
-  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.5));
 }
 h1 {
   text-transform: uppercase;
   text-align: center;
   font-family: "Spartan", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   font-weight: bolder;
 }
 p,
 small {
-  width: 90%;
-  margin: 0 auto 20px auto;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-  font-size: 0.9rem;
-}
-small {
   width: 80%;
-  margin: 0 auto 20px auto;
-  font-size: 0.8rem;
+  max-width: 380px;
+  margin: 5px auto 20px auto;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  line-height: 1.33rem;
+  font-size: 0.9rem;
+  text-shadow: 2px 1px 1px #000000;
+}
+
+small {
+  max-width: 350px;
+  margin-bottom: 30px;
+  font-size: 0.75rem;
 }
 input {
   position: relative;
   width: 50%;
   margin: 0;
+  margin-top: 10px;
   padding-left: 10px;
   color: #26262b;
   z-index: 9;
