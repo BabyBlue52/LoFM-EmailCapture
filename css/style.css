@@ -10,7 +10,7 @@ html {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("/img/wp4918886-lo-fi-desktop-wallpapers.jpeg");
+  background-image: url("./img/wp4918886-lo-fi-desktop-wallpapers.jpeg");
   background-size: cover;
 }
 .overlay {
@@ -108,6 +108,13 @@ input:focus-within {
 }
 input::placeholder {
   padding-left: 0px;
+}
+span > a {
+  color: white;
+  text-decoration: none;
+}
+span > a:hover {
+  opacity: 50%;
 }
 .button {
   margin-left: 5px;
