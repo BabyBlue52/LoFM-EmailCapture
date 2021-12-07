@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>LoFM | Sign Up</title>
     <link rel="stylesheet" href="./css/style.css" />
-
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <!-- Google Fonts-->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +15,7 @@
       rel="stylesheet"
     />
     <!-- /Google Fonts -->
-    <script src="./js/script.js" async></script>
+    <script src="./js/script.js" async ></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -32,62 +31,24 @@
               <img src="./img/logo.png" />
             </div>
 
-            <!-- Begin Mailchimp Signup Form -->
-            <div id="mc_embed_signup">
-              <form
-                action="https://gmail.us6.list-manage.com/subscribe/post?u=e70d48f8315facc8ce5c486ff&amp;id=88d99be112"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                class="validate capture"
-                target="_blank"
-                novalidate
-              >
-                <h1>Coming Soon</h1>
-                <p>
-                  LoFM is an aggregated platform for Lo-fi enthusiasts to listen
-                  to some of their favorite artists all in one place.
-                </p>
-                <small>
-                  Sign up for our mailling list to be notified about the
-                  platform and be the first to know when we launch
-                </small>
-                <div id="mc_embed_signup_scroll">
-                  <label for="mce-EMAIL">Email Address </label>
-                  <input
-                    type="email"
-                    value=""
-                    name="EMAIL"
-                    class="required email"
-                    id="mce-EMAIL"
-                    placeholder="Enter email"
-                  />
-
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div
-                    style="position: absolute; left: -5000px;"
-                    aria-hidden="true"
-                  >
-                    <input
-                      type="text"
-                      name="b_e70d48f8315facc8ce5c486ff_88d99be112"
-                      tabindex="-1"
-                      value=""
-                    />
-                  </div>
-
-                  <input
-                    type="submit"
-                    value="Subscribe"
-                    name="subscribe"
-                    id="mc-embedded-subscribe"
-                    class="button"
-                  />
-                </div>
-              </form>
-            </div>
-
-            <!--End mc_embed_signup-->
+            <!-- Begin Netlify form -->
+            <form name="contact" method="POST" data-netlify="true" class="capture">
+              <h1>Coming Soon</h1>
+              <p>
+                LoFM is an aggregated platform for Lo-fi enthusiasts to listen
+                to some of their favorite artists all in one place.
+              </p>
+              <small>
+                Sign up for our mailling list to be notified about the
+                platform and be the first to know when we launch
+              </small>
+              <div class="d-flex justify-center">
+                <input type="email" name="email" placeholder="Enter Email"/>
+              
+                <button type="submit" class="button" id="toast">Send</button>
+              </div>
+            </form>
+            <!--/ End Netlify form -->
           </div>
         </div>
       </div>
@@ -103,8 +64,8 @@
           >
             <path
               d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
-            /></svg
-        ></i>
+            /></svg>
+        </i>
         <p>Thanks for signing up!</p>
       </div>
     </div>
